@@ -1,0 +1,8 @@
+# feel free to change the version of the packages
+torch==2.0.1
+mmcv-full==1.7.2
+mmflow==0.5.2
+torchvision==0.15.2
+Pillow==9.3.0
+numpy == 1.24.3
+opencv-python==4.12.0.88
