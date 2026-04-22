@@ -1,7 +1,7 @@
 # RS4PG: Rolling Shutter Correction for Photogrammetry
 
 <p align="center">
-Wanpeng Shao†, Muhua Zhu†*, Letian Cao Yifei Xue, Tie Ji, Yizhen Lao*
+Wanpeng Shao†, Muhua Zhu†*, Letian Cao, Yifei Xue, Tie Ji, Yizhen Lao*
 </p>
 
 <div align="center">
