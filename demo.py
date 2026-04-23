@@ -8,7 +8,7 @@ from PIL import Image
 from torchvision import transforms
 from torchvision.utils import save_image
 
-from NLRSC.solver import quadratic_flow
+from NLRSC.solver import NL_RSC_solver
 from NLRSC.utils import feats_sampling
 
 parser = argparse.ArgumentParser()
@@ -45,7 +45,7 @@ def main():
     F0_1_t = torch.from_numpy(F0_1).unsqueeze(0).to(args.device)            # (1,h,w,2)
     
     # Compute correction field D_corr using Proposition 2
-    D_corr = quadratic_flow(F0_minus1_t, F0_1_t, args.gamma, args.tau)     # (1,h,w,2)
+    D_corr = NL_RSC_solver(F0_minus1_t, F0_1_t, args.gamma, args.tau)     # (1,h,w,2)
     
     # Load and warp the RS image I0
     transform = transforms.Compose([transforms.ToTensor()])
