@@ -31,10 +31,10 @@ def main():
     I_minus1_path, I0_path, I1_path = image_paths[0], image_paths[1], image_paths[2]
     
     # Initialize optical flow model
-    MIM_CACHE = Path("~/.cache/mim").expanduser()
-    config_file = MIM_CACHE / f"{args.fconfig}.py"
-    checkpoint_file = MIM_CACHE / f"{args.fconfig}.pth"
+    config_file = 'raft_8x2_100k_mixed_368x768.py'
+    checkpoint_file = 'raft_8x2_100k_mixed_368x768.pth'
     flow_model = init_model(str(config_file), str(checkpoint_file), device=args.device)
+
     
     # Compute optical flows F_{0→-1} and F_{0→1}
     F0_minus1 = inference_model(flow_model, [str(I0_path)], [str(I_minus1_path)], [None])[0]["flow"]  # I0→I-1
