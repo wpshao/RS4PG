@@ -3,7 +3,7 @@
 
 from importlib import metadata as importlib_metadata
 
-from .solver import quadratic_flow
+from .solver import NL_RSC_solver
 from .utils import feats_sampling
 
 
@@ -16,4 +16,4 @@ def get_version() -> str:
 
 version: str = get_version()
 
-__all__ = ["quadratic_flow", "feats_sampling", "version"]
+__all__ = ["NL_RSC_solver", "feats_sampling", "version"]
