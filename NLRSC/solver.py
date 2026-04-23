@@ -3,7 +3,7 @@ from einops import rearrange
 
 
 
-def quadratic_flow(F0n1: torch.Tensor, F01: torch.Tensor, gamma: float, tau: float) -> torch.Tensor:
+def NL_RSC_solver(F0n1: torch.Tensor, F01: torch.Tensor, gamma: float, tau: float) -> torch.Tensor:
     """NL-RSC Solver for quadratic motion model (Proposition 2)
     
     Implements Eq.(11): m_0^GS = m_0 + D_corr
